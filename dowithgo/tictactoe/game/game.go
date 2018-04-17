@@ -34,8 +34,9 @@ type Game struct {
 // New returns a new tic-tac-toe game.
 func New() *Game {
 	return &Game{
-		players:   make(map[string]Piece, 2),
-		nextPiece: X,
+		players: make(map[string]Piece, 2),
+		// Start the game with no "next piece" so either player can go first.
+		nextPiece: 0,
 	}
 }
 
@@ -127,6 +128,12 @@ func (g *Game) Place(playerID string, position [2]int) error {
 	if !found {
 		return errors.New("player does not exist")
 	}
+	// If neither player has placed a piece on the board, allow either player to
+	// move. Then set "next piece" to whichever player just placed, which passes
+	// the "next piece" validation and will be flipped at the end of Place.
+	if g.nextPiece == 0 {
+		g.nextPiece = piece
+	}
 	if piece != g.nextPiece {
 		return errors.New("you cannot place twice in a row")
 	}
@@ -145,11 +152,9 @@ func (g *Game) Place(playerID string, position [2]int) error {
 		return nil
 	}
 
-	if piece == X {
-		g.nextPiece = O
-	} else {
-		g.nextPiece = X
-	}
+	// Flip "next piece" to the opposite piece. The Piece constant values are 1
+	// and -1, so just multiply by -1 to switch to the other value.
+	g.nextPiece *= -1
 	return nil
 }
 
