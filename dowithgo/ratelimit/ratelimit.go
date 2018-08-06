@@ -26,14 +26,13 @@ func (svc *Service) drain() {
 	}
 }
 
-type PingArgs struct{}
+type IncrArgs struct{}
 
-type PingReply struct {
+type IncrReply struct {
 	Limited bool
 }
 
-// TODO: Better name?
-func (svc *Service) Ping(r *http.Request, args *PingArgs, reply *PingReply) error {
+func (svc *Service) Incr(r *http.Request, args *IncrArgs, reply *IncrReply) error {
 	select {
 	case svc.limiter <- struct{}{}:
 	default:

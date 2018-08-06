@@ -100,5 +100,5 @@ func main() {
 	// stack.UseFunc(xsrfMiddleware)
 	stack.Use(negroni.NewStatic(http.Dir("public")))
 	stack.UseHandler(mux)
-	http.ListenAndServe(":8080", stack)
+	http.ListenAndServe(":80", stack)
 }
