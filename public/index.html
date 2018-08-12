@@ -24,7 +24,6 @@
 
   <!-- Custom styles for this template -->
   <link href="/css/resume.css" rel="stylesheet">
-
 </head>
 
 <body id="page-top">
@@ -281,38 +280,38 @@
 
         <div class="subheading mb-3">Programming Languages</div>
         <ul class="list-inline list-icons">
-          <li class="list-inline-item" title="Go">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Go">
             <i class="devicon-go-plain"></i>
           </li>
-          <li class="list-inline-item" title="PHP">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="PHP">
             <i class="devicon-php-plain"></i>
           </li>
-          <li class="list-inline-item" title="Python">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Python">
             <i class="devicon-python-plain"></i>
           </li>
-          <li class="list-inline-item" title="Java">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Java">
             <i class="devicon-java-plain"></i>
           </li>
-          <li class="list-inline-item" title="Ruby">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Ruby">
             <i class="devicon-ruby-plain"></i>
           </li>
-          <li class="list-inline-item" title="SQL">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="SQL">
             <i>SQL</i>
           </li>
-          <li class="list-inline-item" title="Javascript">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Javascript">
             <i class="devicon-javascript-plain"></i>
           </li>
-          <li class="list-inline-item" title="Regular Expressions">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Regular Expressions">
             <i>RegEx</i>
           </li>
         </ul>
 
         <div class="subheading mb-3">Technologies</div>
         <ul class="list-inline list-icons">
-          <li class="list-inline-item" title="Amazon Web Services">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Amazon Web Services">
             <i class="devicon-amazonwebservices-plain"></i>
           </li>
-          <li class="list-inline-item" title="AWS DynamoDB">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS DynamoDB">
             <svg width="60" height="60" viewBox="0 0 100 100">
               <polygon fill="#2e73b8" points="82.42 37.44 82.42 29.8 74.38 21 61.22 50 74.38 78.99 82.42 70.18 82.42 62.54 79.74 64.36 79.74 60.69 82.42 59.3 82.42 51.61 79.74 51.68 79.74 48.24 82.42 48.37 82.42 40.88 79.74 39.48 79.74 36.9 82.42 37.44"
               />
@@ -323,7 +322,7 @@
               />
             </svg>
           </li>
-          <li class="list-inline-item" title="AWS S3">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS S3">
             <svg width="60" height="60" viewBox="0 0 100 100">
               <g>
                 <polygon points="21.54 23.23 16.08 25.96 16.08 73.93 21.54 76.66 34.94 49.94 21.54 23.23" fill="#8c3123" />
@@ -341,7 +340,7 @@
               </g>
             </svg>
           </li>
-          <li class="list-inline-item" title="AWS SQS">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS SQS">
             <svg width="60" height="60" viewBox="0 0 100 100">
               <g>
                 <polygon points="15.9 35.53 15.92 74.12 50 91.16 84.08 74.12 84.08 64.48 55.1 60.87 55.12 39.13 84.1 35.54 84.1 25.89 50 8.84 15.9 25.88 15.9 35.53"
@@ -359,7 +358,7 @@
               </g>
             </svg>
           </li>
-          <li class="list-inline-item" title="AWS ECS">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS ECS">
             <svg width="60" height="60" viewBox="0 0 100 100">
               <polygon fill="#9d5025" points="19.64 22.51 16 24.32 16 75.68 19.64 77.49 33.98 51.07 19.64 22.51" />
               <polygon fill="#9d5025" points="30.72 31.78 36.08 24.19 60.1 34.87 54.5 35.76 30.72 31.78" />
@@ -385,13 +384,13 @@
               <polygon fill="#f58536" points="71.62 57.01 63.13 57.86 63.13 73.26 71.62 70.72 71.62 57.01" />
             </svg>
           </li>
-          <li class="list-inline-item" title="Docker">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Docker">
             <i class="devicon-docker-plain"></i>
           </li>
-          <li class="list-inline-item" title="Distributed Data Systems">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Distributed Data Systems">
             <i>DDS</i>
           </li>
-          <li class="list-inline-item" title="git">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="git">
             <i class="devicon-git-plain"></i>
           </li>
         </ul>
@@ -438,6 +437,9 @@
 
   </div>
 
+  <!-- Popper.js for bootstrap tooltips. Must be loaded before Bootstrap.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+
   <!-- Bootstrap core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
@@ -447,7 +449,7 @@
   <script src="/js/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for this template -->
-  <script src="/js/resume.min.js"></script>
+  <script src="/js/resume.js"></script>
 
 </body>
 
