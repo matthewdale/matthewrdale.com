@@ -1,9 +1,9 @@
 package main
 
 import (
+	"log"
 	"net"
 	"net/http"
-	"strings"
 	"time"
 
 	"github.com/gorilla/rpc/v2"
@@ -18,7 +18,6 @@ import (
 	"github.com/matthewdale/matthewrdale.com/dowithgo/shuffle"
 	"github.com/matthewdale/matthewrdale.com/dowithgo/tictactoe"
 	"github.com/matthewdale/matthewrdale.com/random"
-	"github.com/pkg/errors"
 	gometrics "github.com/rcrowley/go-metrics"
 	"github.com/urfave/negroni"
 	"golang.org/x/net/xsrftoken"
@@ -28,34 +27,42 @@ const xsrfCookieName = "xsrf"
 
 var xsrfKey = random.String(60)
 
-func xsrfMiddleware(writer http.ResponseWriter, request *http.Request, next http.HandlerFunc) {
+func setXSRF(writer http.ResponseWriter, request *http.Request, next http.HandlerFunc) {
+	next(writer, request)
+
 	host, _, err := net.SplitHostPort(request.RemoteAddr)
 	if err != nil {
-		http.Error(
-			writer,
-			errors.WithMessage(err, "error parsing host from remote addr").Error(),
-			http.StatusInternalServerError)
+		log.Printf("Error parsing host from remote addr for setting XSRF cookie: %s", err)
 		return
 	}
 	user := host + request.UserAgent()
-	cookie, _ := request.Cookie(xsrfCookieName)
-	if cookie == nil {
-		http.SetCookie(writer, &http.Cookie{
-			Name:    xsrfCookieName,
-			Value:   xsrftoken.Generate(xsrfKey, user, ""),
-			Expires: time.Now().Add(xsrftoken.Timeout),
-		})
-	}
+	http.SetCookie(writer, &http.Cookie{
+		Name:    xsrfCookieName,
+		Value:   xsrftoken.Generate(xsrfKey, user, ""),
+		Expires: time.Now().Add(xsrftoken.Timeout),
+	})
+}
 
-	// All RPC requests require an XSRF token cookie. Enforce that the cookie
-	// exists and that the token is valid. If it's not, return unauthorized.
-	if strings.HasPrefix(request.URL.Path, "/rpc") {
-		if cookie == nil || !xsrftoken.Valid(cookie.Value, xsrfKey, user, "") {
-			http.Error(writer, "missing XSRF token", http.StatusUnauthorized)
+func validateXSRF(next http.Handler) http.HandlerFunc {
+	return func(writer http.ResponseWriter, request *http.Request) {
+		host, _, err := net.SplitHostPort(request.RemoteAddr)
+		if err != nil {
+			log.Printf("Error parsing host from addr for XSRF validation: %s", err)
+			http.Error(writer, "error parsing host from addr", http.StatusInternalServerError)
 			return
 		}
+		user := host + request.UserAgent()
+		cookie, err := request.Cookie(xsrfCookieName)
+		if err != nil {
+			http.Error(writer, "failed to get XSRF token", http.StatusUnauthorized)
+			return
+		}
+		if !xsrftoken.Valid(cookie.Value, xsrfKey, user, "") {
+			http.Error(writer, "invalid XSRF token", http.StatusUnauthorized)
+			return
+		}
+		next.ServeHTTP(writer, request)
 	}
-	next(writer, request)
 }
 
 var registry = gometrics.NewRegistry()
@@ -77,7 +84,7 @@ func jsonContentType(next http.Handler) http.HandlerFunc {
 func main() {
 	mux := http.NewServeMux()
 
-	// RPC service for "10 Things You Can Do With Go"
+	// RPC service for "Things You Can Do With Go"
 	doWithGoRPC := rpc.NewServer()
 	doWithGoRPC.RegisterCodec(json.NewCodec(), "application/json")
 	doWithGoRPC.RegisterService(ethereum.New(), "ethereum")
@@ -89,7 +96,7 @@ func main() {
 	doWithGoRPC.RegisterService(ratelimit.New(), "ratelimit")
 	doWithGoRPC.RegisterService(shuffle.New(), "shuffle")
 	doWithGoRPC.RegisterService(tictactoe.New(), "tictactoe")
-	mux.Handle("/rpc/dowithgo", jsonContentType(doWithGoRPC))
+	mux.Handle("/rpc/dowithgo", validateXSRF(jsonContentType(doWithGoRPC)))
 
 	// TODO: Replace Negroni file server with a better solution, maybe CDN-based?
 	stack := negroni.New()
@@ -97,7 +104,7 @@ func main() {
 	stack.Use(negroni.NewLogger())
 	stack.UseFunc(metricsMiddleware)
 	// TODO: Reenable.
-	// stack.UseFunc(xsrfMiddleware)
+	// stack.UseFunc(setXSRF)
 	stack.Use(negroni.NewStatic(http.Dir("public")))
 	stack.UseHandler(mux)
 	http.ListenAndServe(":80", stack)
