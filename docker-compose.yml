@@ -1,6 +1,7 @@
 version: '3'
 services:
-  web:
+  app:
+    image: matthewrdalecom:latest
     build: .
     ports:
       - "80:80"
