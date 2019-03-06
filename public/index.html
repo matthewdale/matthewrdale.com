@@ -11,15 +11,18 @@
   <title>Matthew Dale</title>
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
-    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:100,200,300,400,500,600,700,800,900"
+    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+    integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet"
+    href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
   <link href="/css/simple-line-icons.css" rel="stylesheet">
 
   <!-- Custom styles for this template -->
@@ -34,12 +37,12 @@
       <span class="d-block d-lg-none"></span>
       <span class="d-none d-lg-block">
         <!-- TODO: Update gravatar with personal account -->
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="https://www.gravatar.com/avatar/675d80c102d315f480bf1903916ef0c1?s=320"
-          alt="">
+        <img class="img-fluid img-profile rounded-circle mx-auto mb-2"
+          src="https://www.gravatar.com/avatar/675d80c102d315f480bf1903916ef0c1?s=320" alt="">
       </span>
     </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-      aria-expanded="false" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -75,12 +78,10 @@
         </div>
         <p>Hi, I'm Matt. I make things with software.</p>
         <p>Currently, I'm a software engineer at
-          <a href="https://www.tune.com/" , target="_blank">TUNE</a>, where I focus on using the
-          <a href="https://golang.org/" target="_blank">Go</a> programming language to develop and maintain high-performance data systems. I enjoy contributing to Go's
-          strong developer community by delivering Meetup presentations, contributing to open source software, and attending
-          Go conferences.</p>
-        <p class="mb-5">After hours and on the weekends, I like to practice boxing and go to swing dancing socials or get out of the city
-          and into an ocean kayak!</p>
+          <a href="https://branch.io/" target="_blank">Branch.io</a>, where I build and support ad attribution and data
+          migration systems.</p>
+        <p class="mb-5">After hours and on the weekends, I like practicing boxing, swing dancing, or getting out of the
+          city and into an ocean kayak!</p>
         <ul class="list-inline list-social-icons mb-0">
           <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="LinkedIn">
             <a href="https://www.linkedin.com/in/matthewrdale/" target="_blank">
@@ -122,16 +123,38 @@
       <div class="my-auto">
         <h2 class="mb-5">Experience</h2>
 
+        <!-- Start Branch.io -->
+        <div class="resume-item d-flex flex-column flex-md-row mb-5">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Branch.io</h3>
+            <div class="subheading mb-3">Senior Software Engineer</div>
+            <p>Migrated APIs, features, and ad attribution data, including over 50 billion historical records, from a
+              3rd-party attribution product into the Branch attribution systems to support a bulk customer migration.
+            </p>
+            <ul>
+              <li>Built Spark jobs to discover the most recent historical attribution record per source device in a
+                stream of billions of records from hundreds of millions of unique devices, reducing the overall import
+                data volume by over 30%</li>
+              <li>Collaborated with product managers to document features and use cases of a 3rd-party attribution
+                product and map them into the Branch attribution systems</li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right mb-5">
+            <span class="text-primary">Oct 2018 - Present</span>
+          </div>
+        </div>
+        <!-- End Branch.io -->
+
         <!-- Start TUNE -->
         <div class="resume-item d-flex flex-column flex-md-row mb-0">
           <div class="resume-content mr-auto">
             <h3 class="mb-3">TUNE</h3>
             <p>Developed features for and maintained the data collection and attribution systems powering the TMC
-              <i>Attribution Analytics</i> product. Rebuilt existing services to handle over 4.5 billion events per day while
-              reducing cost and on-call disruptions.</p>
+              <i>Attribution Analytics</i> product. Rebuilt existing services to handle over 4.5 billion events per day
+              while reducing cost and on-call disruptions.</p>
           </div>
           <div class="resume-date text-md-right mb-5">
-            <span class="text-primary">May 2014 - Present</span>
+            <span class="text-primary">May 2014 - Sep 2018</span>
           </div>
         </div>
         <div class="resume-item d-flex flex-column flex-md-row mb-0">
@@ -139,30 +162,30 @@
             <div class="subheading mb-3">Software Engineer 4</div>
             <ul>
               <li>Acted as the subject-matter expert and technical leader for the Go programming language at TUNE</li>
-              <li>Owned the migration of a high-volume web service from dedicated hardware to AWS ECS, saving over $20k/mo
+              <li>Owned the migration of a high-volume web service from dedicated hardware to AWS ECS, saving over
+                $20k/mo
                 <ul>
-                  <li>Developed a shared-directory file buffering library that allowed running multiple service instances on
-                    the same host</li>
-                  <li>Diagnosed and resolved a serious performance issue by replacing a SQLite dependency with a native-Go in-memory
-                    database
-                  </li>
+                  <li>Developed a shared-directory file buffering library that allowed running multiple service
+                    instances on the same host</li>
+                  <li>Diagnosed and resolved a serious performance issue by replacing a SQLite dependency with a
+                    native-Go in-memory database</li>
                 </ul>
               </li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
-            <span class="text-primary">Dec 2017 - Present</span>
+            <span class="text-primary">Dec 2017 - Sep 2018</span>
           </div>
         </div>
         <div class="resume-item d-flex flex-column flex-md-row mb-0">
           <div class="resume-content mr-auto">
             <div class="subheading mb-3">Software Engineer 3</div>
             <ul>
-              <li>• Designed, reviewed, implemented, and deployed an AWS SQS message packing library that reduced the system's
-                SQS API call frequency by over 50%, saving over $20k/mo
+              <li>Designed, reviewed, implemented, and deployed an AWS SQS message packing library that reduced the
+                system's SQS API call frequency by over 50%, saving over $20k/mo
               </li>
-              <li>Implemented and coordinated the application update component of a data deletion project that reduced DynamoDB
-                storage cost by over $200k/mo</li>
+              <li>Implemented and coordinated the application update component of a data deletion project that reduced
+                DynamoDB storage cost by over $200k/mo</li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -173,8 +196,8 @@
           <div class="resume-content mr-auto">
             <div class="subheading mb-3">Lead Software Engineer</div>
             <ul>
-              <li>Took on team management responsibilities while the team had no dedicated SDM and established a Scrum-like iterative
-                development process
+              <li>Took on team management responsibilities while the team had no dedicated SDM and established a
+                Scrum-like iterative development process
               </li>
             </ul>
           </div>
@@ -186,11 +209,13 @@
           <div class="resume-content mr-auto">
             <div class="subheading mb-3">Software Engineer</div>
             <ul>
-              <li>Researched Go scheduler performance, focusing on avoiding the pitfalls of Go's semi-preemptive scheduler, and
-                delivered findings in a
-                <a href="https://www.slideshare.net/matthewrdale/demystifying-the-go-scheduler" target="_blank">presentation</a> at a Seattle Go Meetup
+              <li>Researched Go scheduler performance, focusing on avoiding the pitfalls of Go's semi-preemptive
+                scheduler, and delivered findings in a <a
+                  href="https://www.slideshare.net/matthewrdale/demystifying-the-go-scheduler"
+                  target="_blank">presentation</a> at a Seattle Go Meetup
               </li>
-              <li>Established TUNE’s initial Go development practices and helped build TUNE’s first production Go service</li>
+              <li>Established TUNE’s initial Go development practices and helped build TUNE’s first production Go
+                service</li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -207,10 +232,10 @@
             <p>Created and supported a video content ingestion and tracking platform for Amazon
               <i>Instant Video</i>, capable of ingesting and analyzing over 150TB of video content per day.</p>
             <ul>
-              <li>Automated deployment to a high-availability fleet running Aspera Enterprise Server, including graceful management
-                of long-running video transfer processes</li>
-              <li>Updated the encoding service to fetch a frequently-changed configuration file from AWS S3, saving 6 dev hours
-                and over 300 encoding fleet hours when adding content partners</li>
+              <li>Automated deployment to a high-availability fleet running Aspera Enterprise Server, including graceful
+                management of long-running video transfer processes</li>
+              <li>Updated the encoding service to fetch a frequently-changed configuration file from AWS S3, saving 6
+                dev hours and over 300 encoding fleet hours when adding content partners</li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -225,18 +250,14 @@
             <h3 class="mb-0">Oracle (formerly Vitrue)</h3>
             <div class="subheading mb-3">Associate Member Technical Staff</div>
             <p>Developed features for and supported Vitrue's
-              <i>Publisher</i> product, a Ruby on Rails social media marketing automation and management cloud application.</p>
+              <i>Publisher</i> product, a Ruby on Rails social media marketing automation and management cloud
+              application.</p>
             <ul>
               <li>Spearheaded creation of a web API for
                 <i>Publisher</i> to support a new mobile client</li>
-              <li>Selected for a team to integrate Google+ resource management into the
-                <i>Publisher</i> product
-                <ul>
-                  <li>Collaborated with the Google+ Brand Pages API team to troubleshoot and improve the Brand Pages API before
-                    it was publicly available</li>
-                  <li>Secured Vitrue as a launch partner of the Google+ Brand Pages API</li>
-                </ul>
-              </li>
+              <li>Collaborated with the Google+ Brand Pages API team to troubleshoot and improve the Brand Pages API
+                before it was publicly available</li>
+              <li>Helped secure Vitrue as a launch partner of the Google+ Brand Pages API</li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -314,19 +335,22 @@
           </li>
           <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS DynamoDB">
             <svg width="60" height="60" viewBox="0 0 100 100">
-              <polygon fill="#2e73b8" points="82.42 37.44 82.42 29.8 74.38 21 61.22 50 74.38 78.99 82.42 70.18 82.42 62.54 79.74 64.36 79.74 60.69 82.42 59.3 82.42 51.61 79.74 51.68 79.74 48.24 82.42 48.37 82.42 40.88 79.74 39.48 79.74 36.9 82.42 37.44"
-              />
+              <polygon fill="#2e73b8"
+                points="82.42 37.44 82.42 29.8 74.38 21 61.22 50 74.38 78.99 82.42 70.18 82.42 62.54 79.74 64.36 79.74 60.69 82.42 59.3 82.42 51.61 79.74 51.68 79.74 48.24 82.42 48.37 82.42 40.88 79.74 39.48 79.74 36.9 82.42 37.44" />
               <polygon fill="#5294cf" points="60.05 86.17 74.38 78.99 74.38 20.99 60.05 13.83 43.8 50.61 60.05 86.17" />
-              <polygon fill="#2e73b8" points="39.95 86.17 60.05 86.17 60.05 13.83 39.95 13.83 29.57 50.61 39.95 86.17" />
-              <polygon fill="#205b99" points="39.95 86.17 25.49 78.99 20.94 50.61 25.49 20.99 39.91 13.83 39.95 86.17" />
-              <polygon fill="#19486f" points="79.74 60.69 74.37 63.31 60.05 66.4 50.27 66.4 39.95 66.4 25.89 63.31 25.64 63.26 25.48 63.22 25.48 52.3 39.93 53.34 50.27 53.34 60.05 53.34 74.38 52.3 82.43 51.63 79.74 51.61 79.74 48.39 82.39 48.36 74.38 47.77 60.05 47.31 50.27 47.31 40.06 47.31 25.48 47.66 25.48 36.66 25.64 36.63 40.06 33.24 50.27 33.24 60.05 33.24 74.38 36.63 79.74 39.49 79.74 37.68 82.42 37.46 74.38 31.84 60.05 27.21 50.27 27.21 40.06 27.21 25.48 32 25.48 20.99 18.45 29.8 18.45 37.45 20.46 37.68 20.46 39.52 18.45 40.72 18.45 48.37 20.46 48.39 20.46 51.61 18.45 51.64 18.45 59.25 20.46 60.45 20.46 62.32 18.43 62.55 18.45 70.17 25.48 78.98 25.48 67.97 39.94 72.43 50.27 72.43 60.05 72.43 74.38 67.99 82.42 62.54 79.74 62.32 79.74 60.69"
-              />
+              <polygon fill="#2e73b8"
+                points="39.95 86.17 60.05 86.17 60.05 13.83 39.95 13.83 29.57 50.61 39.95 86.17" />
+              <polygon fill="#205b99"
+                points="39.95 86.17 25.49 78.99 20.94 50.61 25.49 20.99 39.91 13.83 39.95 86.17" />
+              <polygon fill="#19486f"
+                points="79.74 60.69 74.37 63.31 60.05 66.4 50.27 66.4 39.95 66.4 25.89 63.31 25.64 63.26 25.48 63.22 25.48 52.3 39.93 53.34 50.27 53.34 60.05 53.34 74.38 52.3 82.43 51.63 79.74 51.61 79.74 48.39 82.39 48.36 74.38 47.77 60.05 47.31 50.27 47.31 40.06 47.31 25.48 47.66 25.48 36.66 25.64 36.63 40.06 33.24 50.27 33.24 60.05 33.24 74.38 36.63 79.74 39.49 79.74 37.68 82.42 37.46 74.38 31.84 60.05 27.21 50.27 27.21 40.06 27.21 25.48 32 25.48 20.99 18.45 29.8 18.45 37.45 20.46 37.68 20.46 39.52 18.45 40.72 18.45 48.37 20.46 48.39 20.46 51.61 18.45 51.64 18.45 59.25 20.46 60.45 20.46 62.32 18.43 62.55 18.45 70.17 25.48 78.98 25.48 67.97 39.94 72.43 50.27 72.43 60.05 72.43 74.38 67.99 82.42 62.54 79.74 62.32 79.74 60.69" />
             </svg>
           </li>
           <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS S3">
             <svg width="60" height="60" viewBox="0 0 100 100">
               <g>
-                <polygon points="21.54 23.23 16.08 25.96 16.08 73.93 21.54 76.66 34.94 49.94 21.54 23.23" fill="#8c3123" />
+                <polygon points="21.54 23.23 16.08 25.96 16.08 73.93 21.54 76.66 34.94 49.94 21.54 23.23"
+                  fill="#8c3123" />
                 <polygon points="50 69.76 21.54 76.65 21.54 23.23 50 30.12 63.45 50.02 50 69.76" fill="#e05243" />
                 <polygon points="50 69.76 78.45 76.65 83.37 50.62 78.45 23.23 50 30.12 50 69.76" fill="#8c3123" />
                 <polygon points="78.45 23.23 83.92 25.96 83.92 73.93 78.45 76.66 78.45 23.23" fill="#e05243" />
@@ -344,7 +368,8 @@
           <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="AWS SQS">
             <svg width="60" height="60" viewBox="0 0 100 100">
               <g>
-                <polygon points="15.9 35.53 15.92 74.12 50 91.16 84.08 74.12 84.08 64.48 55.1 60.87 55.12 39.13 84.1 35.54 84.1 25.89 50 8.84 15.9 25.88 15.9 35.53"
+                <polygon
+                  points="15.9 35.53 15.92 74.12 50 91.16 84.08 74.12 84.08 64.48 55.1 60.87 55.12 39.13 84.1 35.54 84.1 25.89 50 8.84 15.9 25.88 15.9 35.53"
                   fill="#876929" />
                 <polygon points="15.92 64.47 50 74.7 50 91.16 15.92 74.12 15.92 64.47" fill="#876929" />
                 <polygon points="20.25 76.29 15.9 74.11 15.9 25.88 20.26 23.71 20.25 76.29" fill="#876929" />
@@ -418,7 +443,8 @@
         <a href="https://github.com/rakyll/statik/commits?author=matthewdale" target="_blank">
           <h3 class="mb-0">github.com/rakyll/statik</h3>
         </a>
-        <p>Contributed a performance patch that prevents the need to repeatedly uncompress the embedded contents and adds unit
+        <p>Contributed a performance patch that prevents the need to repeatedly uncompress the embedded contents and
+          adds unit
           test coverage.</p>
         <a href="https://github.com/kidoman/embd/commits?author=matthewdale" target="_blank">
           <h3 class="mb-0">github.com/kidoman/embd</h3>
@@ -427,7 +453,8 @@
         <a href="https://github.com/matthewdale/universal" target="_blank">
           <h3 class="mb-0">github.com/matthewdale/universal</h3>
         </a>
-        <p>Package universal provides interfaces for expressing message processing logic and utilities that simplify building
+        <p>Package universal provides interfaces for expressing message processing logic and utilities that simplify
+          building
           and running message processing applications.</p>
         <a href="https://github.com/matthewdale/promise" target="_blank">
           <h3 class="mb-0">github.com/matthewdale/promise</h3>
@@ -443,7 +470,8 @@
 
   <!-- Bootstrap core JavaScript -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
     crossorigin="anonymous"></script>
 
   <!-- Plugin JavaScript -->
