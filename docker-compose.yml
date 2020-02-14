@@ -1,8 +1,0 @@
-version: '3'
-services:
-  app:
-    image: matthewrdalecom:latest
-    build: .
-    ports:
-      - "80:80"
-    restart: always
