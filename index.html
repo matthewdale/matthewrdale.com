@@ -8,6 +8,8 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+  <link rel="shortcut icon" type="image/png" href="/favicon.png" />
+
   <title>Matthew Dale</title>
 
   <!-- Bootstrap core CSS -->
@@ -60,7 +62,10 @@
           <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#projects">Projects &amp; Open Source</a>
+          <a class="nav-link js-scroll-trigger" href="#projects">Projects</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#open-source">Open Source</a>
         </li>
       </ul>
     </div>
@@ -75,10 +80,19 @@
         <div class="subheading mb-5">Seattle, WA ·
           <a href="mailto:matthew@matthewrdale.com" target="_blank">matthew@matthewrdale.com</a>
         </div>
-        <p>Hi, I'm Matt, welcome to my homepage. I'm a software developer living in Seattle, WA looking for exciting engineering challenges in big data systems and streaming data systems, especially using Golang.</p>
+        <p>Hi, I'm Matt, welcome to my homepage. I'm a software developer living in Seattle, WA looking for exciting
+          engineering challenges in big data and streaming data systems, especially using Golang.</p>
         <p class="mb-5">After hours and on the weekends, I like practicing boxing, swing dancing, or getting out of the
           city and into an ocean kayak!</p>
         <ul class="list-inline list-social-icons mb-0">
+          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Resume PDF">
+            <a href="https://matthewrdale.s3.amazonaws.com/resumes/MatthewDale-Resume.pdf" target="_blank">
+              <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-file-pdf fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
           <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="LinkedIn">
             <a href="https://www.linkedin.com/in/matthewrdale/" target="_blank">
               <span class="fa-stack fa-lg">
@@ -103,14 +117,6 @@
               </span>
             </a>
           </li>
-          <li class="list-inline-item" data-toggle="tooltip" data-placement="top" title="Resume PDF">
-            <a href="https://matthewrdale.s3.amazonaws.com/resumes/MatthewDale-Resume.pdf" target="_blank">
-              <span class="fa-stack fa-lg">
-                <i class="fa fa-circle fa-stack-2x"></i>
-                <i class="fa fa-file-pdf fa-stack-1x fa-inverse"></i>
-              </span>
-            </a>
-          </li>
         </ul>
       </div>
     </section>
@@ -126,15 +132,29 @@
             <a href="https://branch.io/" target="_blank">
               <div class="subheading mb-3">Branch.io</div>
             </a>
-            <p>Migrated APIs, features, and ad attribution data, including over 50 billion historical records, from a
-              3rd-party attribution product into the Branch attribution systems to support a bulk customer migration.
-            </p>
             <ul>
-              <li>Built Spark jobs to discover the most recent historical attribution record per source device in a
-                stream of billions of records from hundreds of millions of unique devices, reducing the overall import
-                data volume by over 30%.</li>
-              <li>Collaborated with product managers to document features and use cases of a 3rd-party attribution
-                product and map them into the Branch attribution systems.</li>
+              <li>
+                Built and maintained analytics pipelines for search engine user engagement and content quality using
+                Spark, Presto, Looker and other technologies.</li>
+              <ul>
+                <li>Built and optimized Spark jobs to join millions of search, user engagement, and advertising logs to
+                  build combined datasets used to optimize search results and increase user engagement.</li>
+                <li>Optimized Looker data models to reduce frequently used dashboard refresh times from over 5 minutes
+                  to under 1 minute.</li>
+                <li>Extended a text-based search results comparison tool to automate recurring comparisons, store the
+                  results in a SQL database, and visualize the results using Looker.</li>
+                <li>Collaborated with the search content team to plan and implement a quarterly roadmap of content
+                  quality metrics and insights.</li>
+              </ul>
+              <li>Migrated ad attribution logic and data, including over 50 billion historical records, into the Branch
+                attribution systems to support a bulk customer migration.
+              </li>
+              <ul>
+                <li>Built Spark jobs to filter out unnecessary data from billions of attribution logs, reducing the
+                  overall import data volume by over 30%.</li>
+                <li>Proposed and implemented an on-call review strategy that exposed common failures of the
+                  high-availability ad attribution pipeline, resulting in a sustained reduction in on-call pages.</li>
+              </ul>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -574,31 +594,46 @@
 
     <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="projects">
       <div class="my-auto">
-        <h2 class="mb-5">Projects &amp; Open Source</h2>
+        <h2 class="mb-5">Projects</h2>
+
         <a href="http://biglake.io" target="_blank">
           <h3 class="mb-0">biglake.io</h3>
         </a>
         <p>BigLake is a domain name registrar cross-shopping web tool built with Go and deployed on Digital Ocean.</p>
-        <a href="https://github.com/rakyll/statik/commits?author=matthewdale" target="_blank">
-          <h3 class="mb-0">github.com/rakyll/statik</h3>
-        </a>
-        <p>Contributed a performance patch that prevents the need to repeatedly uncompress the embedded contents and
-          adds unit
-          test coverage.</p>
-        <a href="https://github.com/kidoman/embd/commits?author=matthewdale" target="_blank">
-          <h3 class="mb-0">github.com/kidoman/embd</h3>
-        </a>
-        <p>Contributed a driver for the Hitachi HD44780 character LCD controller.</p>
+
         <a href="https://github.com/matthewdale/universal" target="_blank">
           <h3 class="mb-0">github.com/matthewdale/universal</h3>
         </a>
         <p>Package universal provides interfaces for expressing message processing logic and utilities that simplify
-          building
-          and running message processing applications.</p>
+          building and running message processing applications.</p>
+
         <a href="https://github.com/matthewdale/promise" target="_blank">
           <h3 class="mb-0">github.com/matthewdale/promise</h3>
         </a>
         <p>A simple, fast implementation of a promise in Go.</p>
+
+        <a href="https://github.com/matthewdale/fnplot" target="_blank">
+          <h3 class="mb-0">github.com/matthewdale/fnplot</h3>
+        </a>
+        <p>Package fnplot provides a way to plot input/output values for arbitrary functions on a 2D cartesian
+          coordinate plot.</p>
+      </div>
+    </section>
+
+    <section class="resume-section p-3 p-lg-5 d-flex flex-column" id="open-source">
+      <div class="my-auto">
+        <h2 class="mb-5">Open Source</h2>
+
+        <a href="https://github.com/rakyll/statik/commits?author=matthewdale" target="_blank">
+          <h3 class="mb-0">github.com/rakyll/statik</h3>
+        </a>
+        <p>Contributed a performance patch that prevents the need to repeatedly uncompress the embedded contents and
+          adds unit test coverage.</p>
+
+        <a href="https://github.com/kidoman/embd/commits?author=matthewdale" target="_blank">
+          <h3 class="mb-0">github.com/kidoman/embd</h3>
+        </a>
+        <p>Contributed a driver for the Hitachi HD44780 character LCD controller.</p>
       </div>
     </section>
 
