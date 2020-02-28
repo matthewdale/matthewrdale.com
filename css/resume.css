@@ -156,3 +156,7 @@ a {
 a:hover, a:focus, a:active {
   color: #5e8ed6;
 }
+
+ul {
+  padding-left: 20px;
+}
