@@ -125,6 +125,34 @@
       <div class="my-auto">
         <h2 class="mb-5">Experience</h2>
 
+        <!-- Start Sift Science -->
+        <div class="resume-item d-flex flex-column flex-md-row">
+          <div class="resume-content mr-auto">
+            <h3 class="mb-0">Staff Software Engineer</h3>
+            <a href="https://sift.com/" target="_blank">
+              <div class="subheading mb-3">Sift Science</div>
+            </a>
+            <ul>
+              <li>
+                Improved scalability of GDPR compliance systems that evaluated over 500 billion records weekly.</li>
+              <ul>
+                <li>Removed artificial concurrency limits in Airflow DAG structure, replacing them with flexible
+                  parallelism limits using Airflow task pools.</li>
+                <li>Experimented with rewriting Apache Crunch ETL jobs as Spark ETL jobs to improve reliability on
+                  Google Cloud Dataproc.</li>
+              </ul>
+              <li>Helped reduce team’s average weekly alerts by 50% by implementing quarterly operational excellence
+                reviews and specifying improvement action items.</li>
+              <li>Split monolithic Gradle projects into smaller subprojects to exclude unnecessary dependencies and
+                shrink various JAR sizes by over 150Mb.</li>
+            </ul>
+          </div>
+          <div class="resume-date text-md-right mb-5">
+            <span class="text-primary">Apr 2020 - Present</span>
+          </div>
+        </div>
+        <!-- End Sift Science -->
+
         <!-- Start Branch.io -->
         <div class="resume-item d-flex flex-column flex-md-row">
           <div class="resume-content mr-auto">
@@ -134,14 +162,11 @@
             </a>
             <ul>
               <li>
-                Built and maintained analytics pipelines for search engine user engagement and content quality.</li>
+                Built and maintained analytics systems for search user engagement and content quality.</li>
               <ul>
-                <li>Built and optimized Spark jobs to join millions of search, user engagement, and advertising logs to
-                  build combined datasets used to optimize search results and increase user engagement.</li>
-                <li>Optimized Looker data models to reduce frequently used dashboard refresh times from over 5 minutes
-                  to under 1 minute.</li>
-                <li>Extended a text-based search results comparison tool to automate recurring comparisons, store the
-                  results in a SQL database, and visualize the results using Looker.</li>
+                <li>Built and optimized Spark jobs to join millions of disparate search logs to build unified datasets
+                  used to optimize search results and increase user engagement.</li>
+                <li>Optimized Looker data models to reduce dashboard refresh times by 80%.</li>
                 <li>Collaborated with the search content team to plan and implement a quarterly roadmap of content
                   quality metrics and insights.</li>
               </ul>
@@ -150,8 +175,8 @@
               <ul>
                 <li>Built Spark jobs to filter out unnecessary data from billions of attribution logs, reducing the
                   overall import data volume by over 30%.</li>
-                <li>Proposed and implemented an on-call review strategy that exposed common failures of the
-                  high-availability ad attribution pipeline, resulting in a sustained reduction in on-call pages.</li>
+                <li>Implemented an on-call review strategy that exposed common failures of the high- availability ad
+                  attribution pipeline, resulting in a sustained reduction in on-call pages.</li>
               </ul>
             </ul>
           </div>
@@ -162,41 +187,18 @@
         <!-- End Branch.io -->
 
         <!-- Start TUNE -->
-        <div class="resume-item d-flex flex-column flex-md-row">
+        <div class="resume-item d-flex flex-column flex-md-row" style="height: 30px">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Software Engineer 4</h3>
-            <div class="subheading mb-3"><a href="https://www.tune.com/" target="_blank">TUNE</a></div>
-            <ul>
-              <li>Subject-matter expert and technical leader for the Go programming language at TUNE.</li>
-              <li>Owned the migration of a high-volume web service from AWS EC2 hardware to shared and autoscaled AWS
-                ECS hardware, saving over $20k/month.
-                <ul>
-                  <li>Developed a local disk buffering library that allowed running multiple service
-                    instances on the same ECS host.</li>
-                  <li>Diagnosed and resolved a serious performance issue by replacing a SQLite dependency with a
-                    native-Go in-memory database.</li>
-                </ul>
-              </li>
-            </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
             <span class="text-primary">Dec 2017 - Sep 2018</span>
           </div>
         </div>
 
-        <div class="resume-item d-flex flex-column flex-md-row">
+        <div class="resume-item d-flex flex-column flex-md-row" style="height: 30px">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Software Engineer 3</h3>
-            <a href="https://www.tune.com/" target="_blank">
-              <div class="subheading mb-3">TUNE</div>
-            </a>
-            <ul>
-              <li>Owned development and deployment of an AWS SQS message packing library that reduced SQS API call
-                frequency by over 50%, saving over $20k/month.
-              </li>
-              <li>Coordinated the application update component of a data deletion project that reduced
-                DynamoDB storage cost by over $200k/month.</li>
-            </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
             <span class="text-primary">Dec 2015 - Dec 2017</span>
@@ -206,16 +208,19 @@
         <div class="resume-item d-flex flex-column flex-md-row">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Software Engineer</h3>
-            <a href="https://www.tune.com/" target="_blank">
+            <a href="https://tune.com/" target="_blank">
               <div class="subheading mb-3">TUNE</div>
             </a>
             <ul>
-              <li>Established TUNE’s Go development practices and helped build TUNE’s first Go service.</li>
-              <li>Researched Go scheduler performance, focusing on avoiding the pitfalls of Go's semi-preemptive
-                scheduler, and delivered findings in a <a
-                  href="https://www.slideshare.net/matthewrdale/demystifying-the-go-scheduler"
-                  target="_blank">presentation</a> at a Seattle Go Meetup.
-              </li>
+              <li>Subject-matter expert and technical leader for the Go programming language at TUNE.</li>
+              <li>Owned the migration of a high-volume web service from AWS EC2 hardware to shared and autoscaled AWS
+                ECS hardware, saving over $20k/month.</li>
+              <li>Owned development and deployment of an AWS SQS message packing library that reduced SQS API call
+                frequency by over 50%, saving over $20k/month.</li>
+              <li>Coordinated the application update component of a data deletion project that reduced DynamoDB storage
+                cost by over $200k/month.</li>
+              <li>Researched Go scheduler performance, focusing on avoiding the pitfalls of Go's semi- preemptive
+                scheduler, and delivered findings in a presentation at a Seattle Go Meetup.</li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -228,18 +233,12 @@
         <div class="resume-item d-flex flex-column flex-md-row mb-5">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Software Development Engineer</h3>
-            <a href="https://www.amazon.com/Prime-Video" target="_blank">
+            <a href="https://amazon.com/aiv" target="_blank">
               <div class="subheading mb-3">Amazon (Prime Video)</div>
             </a>
             <ul>
-              <li>Created and supported a new video ingestion platform for <i>Prime Video</i>, capable of ingesting and
+              <li>Created and supported a new video ingestion platform for Prime Video, capable of ingesting and
                 analyzing over 150 TB of video content per day.</li>
-              <ul>
-                <li>Automated deployment to a high-availability fleet running Aspera Enterprise Server, including
-                  graceful management of long-running video transfers.</li>
-                <li>Updated a video encoding service to use online instead of static configurations, saving 6 person
-                  hours and over 300 encoding hours when adding a content partner.</li>
-              </ul>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -252,12 +251,12 @@
         <div class="resume-item d-flex flex-column flex-md-row">
           <div class="resume-content mr-auto">
             <h3 class="mb-0">Associate Member Technical Staff</h3>
-            <a href="https://www.oracle.com/marketingcloud/" target="_blank">
+            <a href="https://oracle.com/marketingcloud/" target="_blank">
               <div class="subheading mb-3">Oracle (formerly Vitrue)</div>
             </a>
             <ul>
-              <li>Developed features for and supported the <i>Publisher</i> product, a social media marketing automation
-                and management cloud application.</li>
+              <li>Developed features for and supported the Publisher product, a social media marketing automation and
+                management cloud application.</li>
             </ul>
           </div>
           <div class="resume-date text-md-right mb-5">
@@ -595,7 +594,14 @@
         <a href="http://biglake.io" target="_blank">
           <h3 class="mb-0">biglake.io</h3>
         </a>
-        <p>BigLake is a domain name registrar cross-shopping web tool written in Go.</p>
+        <p>A domain name registrar cross-shopping web app written in Go.</p>
+
+        <a href="https://manualsmap.com" target="_blank">
+          <h3 class="mb-0">manualsmap.com</h3>
+        </a>
+        <p>Apple Maps-based web app for tagging and viewing manual transmission cars near you. See code at <a
+            href="https://github.com/matthewdale/manualsmap.com"
+            target="_blank">https://github.com/matthewdale/manualsmap.com</a></p>
 
         <a href="https://github.com/matthewdale/universal" target="_blank">
           <h3 class="mb-0">github.com/matthewdale/universal</h3>
